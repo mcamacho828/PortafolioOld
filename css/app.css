@@ -123,6 +123,7 @@ body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; m
   .timeline ol li:last-child, .timeline ol li:nth-last-child(2) div::before, .timeline ol li:not(:last-child)::after, .timeline .arrows { display: none; } }
 
 /* --------------------------------- */
+/* 1. HABILIDADES ----------------------------------- */
 #boton { width: 120px; height: 30px; }
 
 progresso[value] { -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; width: 270px; height: 30px; overflow: hidden; border: 1px inset #666; background-color: #D8D8D8; border-radius: 20px; }
@@ -139,6 +140,16 @@ progressoo::-webkit-progresso-value { background: #FF8000; background: #ffaf4b; 
 progresso::-webkit-progresso-bar { background-color: #D8D8D8; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; border-radius: 20px; }
 
 .parallax-container { height: auto !important; }
+
+/* --------------------------------- */
+/* 1. SENNTENCE ----------------------------------- */
+.sentence { padding: 60px; background-color: gray; }
+
+/* --------------------------------- */
+/* 1. ACTUALIDAD ----------------------------------- */
+.actu { padding: 30px; }
+
+.actu .boxx { padding: 15px; background: #E5DCD3; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin: 20px; }
 
 /* --------------------------------- */
 /* 1. QUERY ----------------------------------- */

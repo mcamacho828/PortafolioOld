@@ -364,6 +364,67 @@ $break-min: 600px
     display: none
 
 /* --------------------------------- */
+
+#boton
+	width: 120px
+	height: 30px
+
+
+progresso[value]
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	border: none
+	width: 270px
+	height: 30px
+	overflow:	hidden
+	border: 1px inset #666
+	background-color:	#D8D8D8
+	border-radius: 20px
+
+
+.progresso
+	float: left
+	margin-right:	30px
+	margin-bottom: 20px
+
+.progresso span
+	font-weight:	bold
+
+/* Compatibilidad de color en Firefox, Chrome y Safari */
+progresso::-moz-progresso-bar
+	background: #FF8000
+	background: rgba(255,175,75,1)
+	background: -moz-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)))
+	background: -webkit-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -o-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -ms-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: linear-gradient(to right, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+
+	border-radius: 20px
+
+progressoo::-webkit-progresso-value
+	background: #FF8000
+	background: rgba(255,175,75,1)
+	background: -moz-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)))
+	background: -webkit-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -o-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: -ms-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	background: linear-gradient(to right, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%)
+	border-radius: 20px
+
+
+progresso::-webkit-progresso-bar
+	background-color: #D8D8D8
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset
+	border-radius: 20px
+
+
+.parallax-container
+	height: auto !important
+/* --------------------------------- */
 /* 1. QUERY
  ----------------------------------- */
 

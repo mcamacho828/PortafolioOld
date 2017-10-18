@@ -123,6 +123,24 @@ body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; m
   .timeline ol li:last-child, .timeline ol li:nth-last-child(2) div::before, .timeline ol li:not(:last-child)::after, .timeline .arrows { display: none; } }
 
 /* --------------------------------- */
+#boton { width: 120px; height: 30px; }
+
+progresso[value] { -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; width: 270px; height: 30px; overflow: hidden; border: 1px inset #666; background-color: #D8D8D8; border-radius: 20px; }
+
+.progresso { float: left; margin-right: 30px; margin-bottom: 20px; }
+
+.progresso span { font-weight: bold; }
+
+/* Compatibilidad de color en Firefox, Chrome y Safari */
+progresso::-moz-progresso-bar { background: #FF8000; background: #ffaf4b; background: -moz-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #ffaf4b), color-stop(100%, #ff920a)); background: -webkit-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -o-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -ms-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: linear-gradient(to right, #ffaf4b 0%, #ff920a 100%); border-radius: 20px; }
+
+progressoo::-webkit-progresso-value { background: #FF8000; background: #ffaf4b; background: -moz-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #ffaf4b), color-stop(100%, #ff920a)); background: -webkit-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -o-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -ms-linear-gradient(left, #ffaf4b 0%, #ff920a 100%); background: -webkit-gradient(linear, left top, right top, from(#ffaf4b), to(#ff920a)); background: linear-gradient(to right, #ffaf4b 0%, #ff920a 100%); border-radius: 20px; }
+
+progresso::-webkit-progresso-bar { background-color: #D8D8D8; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; border-radius: 20px; }
+
+.parallax-container { height: auto !important; }
+
+/* --------------------------------- */
 /* 1. QUERY ----------------------------------- */
 @-webkit-keyframes float { 0% { -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     -webkit-transform: translatey(0px);

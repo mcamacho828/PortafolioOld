@@ -15,6 +15,7 @@ body,html
 	height: 100%
 	margin: 0
 	line-height: 1.8 !important
+	background-color: #F7F7F7
 
 .cl-r
 	color: red
@@ -25,6 +26,24 @@ body,html
 .cl-w
 	color: white
 
+.cl-gr
+	background-color: #E8E8E8
+
+.pdd
+	margin: 50px 0px
+
+.hr
+	height: 10px
+	background: #c62828
+	margin: 0
+
+
+$break-small: 993px
+
+@media screen and (max-width: $break-small)
+
+	.mrg
+		margin: 0px 50px 40px 50px !important
 /* --------------------------------- */
 /* 1. MENU
  ----------------------------------- */
@@ -194,8 +213,6 @@ $break-min: 600px
  ----------------------------------- */
 
 .timeline
-	background: gray
-
 	button
 	  background: transparent
 	  border: none
@@ -389,6 +406,7 @@ progresso[value]
 	float: left
 	margin-right:	30px
 	margin-bottom: 20px
+	margin: 0
 
 .progresso span
 	font-weight:	bold
@@ -426,6 +444,16 @@ progresso::-webkit-progresso-bar
 .parallax-container
 	height: auto !important
 
+.bar
+	width: 90%
+	height: 20px
+
+$break-small: 993px
+
+@media screen and (max-width: $break-small)
+
+	.bar
+		width: 100%
 /* --------------------------------- */
 /* 1. SENNTENCE
  ----------------------------------- */
@@ -475,8 +503,8 @@ $break-large: 992px
 		border-radius: 38%
 		right: 0
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6)
-		transform: translatey(0px)
-		animation: float 8s ease-in-out infinite
+		//transform: translatey(0px)
+		//animation: float 8s ease-in-out infinite
 
 	.navmobile
 		margin-right: -50px !important

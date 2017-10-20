@@ -2,13 +2,21 @@
 
 @font-face { font-family: 'Roboto Slab', serif; src: url("font/RobotoSlab-Regular.ttf"); }
 
-body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; margin: 0; line-height: 1.8 !important; }
+body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; margin: 0; line-height: 1.8 !important; background-color: #F7F7F7; }
 
 .cl-r { color: red; }
 
 .cl-g { color: gray; }
 
 .cl-w { color: white; }
+
+.cl-gr { background-color: #E8E8E8; }
+
+.pdd { margin: 50px 0px; }
+
+.hr { height: 10px; background: #c62828; margin: 0; }
+
+@media screen and (max-width: 993px) { .mrg { margin: 0px 50px 40px 50px !important; } }
 
 /* --------------------------------- */
 /* 1. MENU ----------------------------------- */
@@ -67,8 +75,6 @@ body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; m
 
 /*----------------------------------*/
 /* 1. EXPERIENCE ----------------------------------- */
-.timeline { background: gray; }
-
 .timeline button { background: transparent; border: none; cursor: pointer; outline: none; }
 
 .timeline .section { padding: 50px 0; }
@@ -128,7 +134,7 @@ body, html { font-family: 'Roboto Slab', serif; font-size: 14px; height: 100%; m
 
 progresso[value] { -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; width: 270px; height: 30px; overflow: hidden; border: 1px inset #666; background-color: #D8D8D8; border-radius: 20px; }
 
-.progresso { float: left; margin-right: 30px; margin-bottom: 20px; }
+.progresso { float: left; margin-right: 30px; margin-bottom: 20px; margin: 0; }
 
 .progresso span { font-weight: bold; }
 
@@ -140,6 +146,10 @@ progressoo::-webkit-progresso-value { background: #FF8000; background: #ffaf4b; 
 progresso::-webkit-progresso-bar { background-color: #D8D8D8; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; border-radius: 20px; }
 
 .parallax-container { height: auto !important; }
+
+.bar { width: 90%; height: 20px; }
+
+@media screen and (max-width: 993px) { .bar { width: 100%; } }
 
 /* --------------------------------- */
 /* 1. SENNTENCE ----------------------------------- */
@@ -172,7 +182,7 @@ progresso::-webkit-progresso-bar { background-color: #D8D8D8; -webkit-box-shadow
     -webkit-transform: translatey(0px);
     transform: translatey(0px); } }
 
-@media screen and (max-width: 991px) { .nav-header { width: 50px; margin: 50px; border-radius: 38%; right: 0; -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); -webkit-transform: translatey(0px); -ms-transform: translatey(0px); transform: translatey(0px); -webkit-animation: float 8s ease-in-out infinite; animation: float 8s ease-in-out infinite; }
+@media screen and (max-width: 991px) { .nav-header { width: 50px; margin: 50px; border-radius: 38%; right: 0; -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); }
   .navmobile { margin-right: -50px !important; }
   .side-nav { height: auto !important; padding-bottom: 0 !important; }
   .side-nav li a { height: 60px; color: white; font-weight: bold; line-height: 67px; } }

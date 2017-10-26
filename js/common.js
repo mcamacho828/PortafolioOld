@@ -31,21 +31,26 @@ $(document).ready(function(){
     ]
   });
   $('.parallax').parallax();
-  window.onload = function() {
-    animateprogress("#html5",91);
-    animateprogress("#php",72);
-    animateprogress("#css",86);
-    animateprogress("#python",52);
-    animateprogress("#javascript",79);
-    animateprogress("#nodejs",36);
-  }
+    window.onload = function() {
+      animateprogress("#html5",91);
+      animateprogress("#bbt",86);
+      animateprogress("#css",86);
+      animateprogress("#wd",52);
+      animateprogress("#javascript",32);
+      animateprogress("#ang",26);
+      animateprogress("#qa",62);
+      animateprogress("#c",30);
+    }
+
   document.querySelector ("#boton").addEventListener ("click", function() {
     animateprogress("#html5",91);
-    animateprogress("#php",72);
+    animateprogress("#bbt",86);
     animateprogress("#css",86);
-    animateprogress("#python",52);
-    animateprogress("#javascript",79);
-    animateprogress("#nodejs",36);
+    animateprogress("#wd",52);
+    animateprogress("#javascript",32);
+    animateprogress("#ang",26);
+    animateprogress("#qa",62);
+    animateprogress("#c",30);
   });
   function animateprogress (id, val){
 
@@ -78,4 +83,70 @@ $(document).ready(function(){
 
         fpAnimationFrame(animacion);   /*  <---- Llamo la función animación por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
   }
+
+  $('#contactForm').on('submit', function(e){
+  e.preventDefault();
+  var $this = $(this),
+    data = $(this).serialize(),
+    name = $this.find('#contact_name'),
+    email = $this.find('#email'),
+    message = $this.find('#textarea1'),
+    loader = $this.find('.form-loader-area'),
+    submitBtn = $this.find('button, input[type="submit"]');
+
+  loader.show();
+  submitBtn.attr('disabled', 'disabled');
+
+  function success(response) {
+    swal("Gracias!", "¡Tu mensaje ha sido enviado exitosamente!", "success");
+    $this.find("input, textarea").val("");
+  }
+
+  function error(response) {
+    $this.find('input.invalid, textarea.invalid').removeClass('invalid');
+    if ( response.name ) {
+      name.removeClass('valid').addClass('invalid');
+    }
+
+    if ( response.email ) {
+      email.removeClass('valid').addClass('invalid');
+    }
+
+    if ( response.message ) {
+      message.removeClass('valid').addClass('invalid');
+    }
+  }
+
+  $.ajax({
+    type: "POST",
+    url: "inc/sendEmail.php",
+    data: data
+  }).done(function(res){
+
+    var response = JSON.parse(res);
+    console.log(response);
+    if ( response.OK ) {
+      success(response);
+    } else {
+      error(response);
+    }
+
+
+    var hand = setTimeout(function(){
+      loader.hide();
+      submitBtn.removeAttr('disabled');
+      clearTimeout(hand);
+    }, 1000);
+
+  }).fail(function(){
+    sweetAlert("Oops...", "Algo salió mal, ¡Vuelva a intentarlo!", "error");
+    var hand = setTimeout(function(){
+      loader.hide();
+      submitBtn.removeAttr('disabled');
+      clearTimeout(hand);
+    }, 1000);
+  });
+});
+
+
 });
